@@ -63,35 +63,35 @@
         <div class="modal-body">
             <form class="row g-3">
                 <div class="col-12">
-                    <input type="text" class="form-control"   placeholder="Número tarjeta"> 
+                    <input type="text" class="form-control" name="inputNumeroTarjeta" [(ngModel)]="inputNumeroTarjeta"  placeholder="Número tarjeta"> 
                 </div>
                 <div class="col-md-6">
-                    <input type="email" class="form-control"   placeholder="Cuenta"> 
+                    <input type="text" class="form-control" name="inputCuenta" [(ngModel)]="inputCuenta"  placeholder="Cuenta"> 
                 </div>
                 <div class="col-md-6">
-                    <input type="password" class="form-control"   placeholder="Issuer"> 
+                    <input type="text" class="form-control" name="inputIssuer" [(ngModel)]="inputIssuer"  placeholder="Issuer"> 
                 </div>
 
                 <div class="col-12">
-                    <input type="text" class="form-control"   placeholder="Nombre Tarjeta"> 
+                    <input type="text" class="form-control" name="inputNombreTarjeta" [(ngModel)]="inputNombreTarjeta"   placeholder="Nombre Tarjeta"> 
                 </div>  
                 <div class="col-12">
-                    <input type="text" class="form-control"   placeholder="Marca"> 
+                    <input type="text" class="form-control" name="inputMarca" [(ngModel)]="inputMarca"  placeholder="Marca"> 
                 </div>  
                 <div class="col-12">
-                    <input type="text" class="form-control"  placeholder="Estatus"> 
+                    <input type="text" class="form-control" name="inputEstatus" [(ngModel)]="inputEstatus" placeholder="Estatus"> 
                 </div>  
                 <div class="col-12">
-                    <input type="text" class="form-control"   placeholder="Saldo"> 
+                    <input type="text" class="form-control" name="inputSaldo" [(ngModel)]="inputSaldo"  placeholder="Saldo"> 
                 </div>  
                 <div class="col-12">
-                    <input type="text" class="form-control"   placeholder="Tipo de cuenta"> 
+                    <input type="text" class="form-control" name="inputTipoCuenta" [(ngModel)]="inputTipoCuenta"  placeholder="Tipo de cuenta"> 
                 </div>  
             </form>
         </div>
         <div class="modal-footer d-flex justify-content-around">
           <button type="button" class="btn btn-secondary btnTarjetaCancel" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-success btnTarjetaAdd">Agregar Tarjeta</button>
+          <button type="button" class="btn btn-success btnTarjetaAdd" (click)="btnAgregarTarjeta()">Agregar Tarjeta</button>
         </div>
       </div>
     </div>

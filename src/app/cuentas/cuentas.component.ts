@@ -18,6 +18,53 @@ export class CuentasComponent implements OnInit {
   ngOnInit(): void {
   }
 
- 
+  inputNumeroTarjeta:any;
+  inputCuenta:any;
+  inputIssuer:any;
+  inputNombreTarjeta:any;
+  inputMarca:any;
+  inputEstatus:any;
+  inputSaldo:any;
+  inputTipoCuenta:any;
+
+  btnAgregarTarjeta (){ 
+    if(
+      this.inputNumeroTarjeta  == undefined ||
+      this.inputCuenta  == undefined ||
+      this.inputIssuer  == undefined ||
+      this.inputNombreTarjeta  == undefined ||
+      this.inputMarca  == undefined ||
+      this.inputEstatus  == undefined ||
+      this.inputSaldo  == undefined ||
+      this.inputTipoCuenta == undefined 
+      ){
+        alert('rellene todos los campos');
+    }else{
+      var Obj = {
+        'inputNumeroTarjeta': this.inputNumeroTarjeta,
+        'inputCuenta': this.inputCuenta,
+        'inputIssuer': this.inputIssuer,
+        'inputNombreTarjeta': this.inputNombreTarjeta,
+        'inputMarca': this.inputMarca,
+        'inputEstatus': this.inputEstatus,
+        'inputSaldo': this.inputSaldo,
+        'inputTipoCuenta': this.inputTipoCuenta
+        };
+         
+        alert(Obj);
+        console.log(Obj);
+
+        this.inputNumeroTarjeta  = '';
+        this.inputCuenta  = '';
+        this.inputIssuer  = '';
+        this.inputNombreTarjeta  = '';
+        this.inputMarca  = '';
+        this.inputEstatus  = '';
+        this.inputSaldo  = '';
+        this.inputTipoCuenta = '';
+    }
+
+    return 0;
+  }
 
 }
