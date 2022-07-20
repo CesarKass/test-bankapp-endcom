@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-nav',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  Cuenta:any = [];
+  constructor(private data : DataService){
+    this.data.getAccount().subscribe(response =>{  
+      this.Cuenta = response;
+    })
+  } 
 
   ngOnInit(): void {
   }

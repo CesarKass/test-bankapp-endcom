@@ -9,10 +9,15 @@
       </tr>
     </thead>
     <tbody>
-      <tr> 
-        <td>dato 1</td> 
-        <td>dato 2</td> 
-        <td>dato 3</td> 
+      <tr *ngFor="let movimiento of Movimientos.movimientos"> 
+        <td>{{movimiento.fecha}}</td> 
+        <td>{{movimiento.descripcion}}</td> 
+        <td *ngIf="movimiento.tipo == 'abono'">
+            <div style="color:green;">${{movimiento.monto}}</div>
+        </td> 
+        <td *ngIf="movimiento.tipo == 'cargo'">
+            <div style="color:red;">${{movimiento.monto}}</div>
+        </td> 
       </tr>
     </tbody>
   </table>

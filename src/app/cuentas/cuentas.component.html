@@ -1,6 +1,6 @@
 <H6>MIS CUENTAS</H6>
 
-<div class="cuentas">
+<!-- <div class="cuentas">
     <div class="cuenta">
         <a href="#" ></a>
         <span class="estadoCuenta">Activa</span>
@@ -27,6 +27,28 @@
               </div> 
         </button>
     </div>
+</div> -->
+
+<div class="cuentas">
+    <div  *ngFor="let tarjeta of Tarjetas.tarjetas">
+        <div class="cuenta {{ tarjeta.estado }}">
+            <a href="#" ></a>
+            <span class="estadoCuenta">{{ tarjeta.estado }}</span>
+            <span class="cantidadCuenta">$ {{ tarjeta.saldo }}</span>
+            <p class="numCuenta">{{ tarjeta.tarjeta }}</p>
+            <p class="nomCuenta">{{ tarjeta.nombre }}</p>
+            <p class="tipoCuenta">{{ tarjeta.tipo }}</p>
+            <img src="\assets\img\cuentas-mc.png" alt="logiitoCuenta" srcset="">
+        </div>
+    </div>
+    <div class="agregarCuenta">
+        <button  data-bs-toggle="modal" data-bs-target="#agregarTarjetaModal"> 
+            <div class="d-flex bd-highlight mb-3">
+                <div class="me-auto p-2">Agregar Tarjeta</div>
+                <div class="p-2"><svg style="color: #07be90;" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11.5 0c6.347 0 11.5 5.153 11.5 11.5s-5.153 11.5-11.5 11.5-11.5-5.153-11.5-11.5 5.153-11.5 11.5-11.5zm0 1c5.795 0 10.5 4.705 10.5 10.5s-4.705 10.5-10.5 10.5-10.5-4.705-10.5-10.5 4.705-10.5 10.5-10.5zm.5 10h6v1h-6v6h-1v-6h-6v-1h6v-6h1v6z" fill="#07be90"/></svg></div> 
+              </div> 
+        </button>
+    </div>
 </div>
 
 <!-- Modal -->
@@ -41,29 +63,29 @@
         <div class="modal-body">
             <form class="row g-3">
                 <div class="col-12">
-                    <input type="text" class="form-control" id="inputAddress" placeholder="Número tarjeta"> 
+                    <input type="text" class="form-control"   placeholder="Número tarjeta"> 
                 </div>
                 <div class="col-md-6">
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Cuenta"> 
+                    <input type="email" class="form-control"   placeholder="Cuenta"> 
                 </div>
                 <div class="col-md-6">
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="Issuer"> 
+                    <input type="password" class="form-control"   placeholder="Issuer"> 
                 </div>
 
                 <div class="col-12">
-                    <input type="text" class="form-control" id="inputAddress2" placeholder="Nombre Tarjeta"> 
+                    <input type="text" class="form-control"   placeholder="Nombre Tarjeta"> 
                 </div>  
                 <div class="col-12">
-                    <input type="text" class="form-control" id="inputAddress2" placeholder="Marca"> 
+                    <input type="text" class="form-control"   placeholder="Marca"> 
                 </div>  
                 <div class="col-12">
-                    <input type="text" class="form-control" id="inputAddress2" placeholder="Estatus"> 
+                    <input type="text" class="form-control"  placeholder="Estatus"> 
                 </div>  
                 <div class="col-12">
-                    <input type="text" class="form-control" id="inputAddress2" placeholder="Saldo"> 
+                    <input type="text" class="form-control"   placeholder="Saldo"> 
                 </div>  
                 <div class="col-12">
-                    <input type="text" class="form-control" id="inputAddress2" placeholder="Tipo de cuenta"> 
+                    <input type="text" class="form-control"   placeholder="Tipo de cuenta"> 
                 </div>  
             </form>
         </div>

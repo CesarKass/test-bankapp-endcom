@@ -16,9 +16,11 @@
             <a class="nav-link" href="#"><b>ENVIAR DINERO</b></a>
           </li> 
         </ul>
-        <span class="navbar-text text-end">
-            <b>Nombre</b><br>
-            Último inicio 18/07/2019
+        <span class="navbar-text text-end"> 
+            <div *ngFor="let cuenta of Cuenta.cuenta">
+                <b>{{cuenta.nombre}}</b><br>
+                Último inicio {{cuenta.ultimaSesion}}
+            </div>
         </span>
       </div>
     </div>

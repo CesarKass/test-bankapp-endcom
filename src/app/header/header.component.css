@@ -16,8 +16,14 @@ p{
 
 span{
     color: #05be92;
+    font-size: 20pt;
 }
 
-#spanIngresos > #spanGastos{
+#spanIngresos {
     color: #9baaad;
+    font-size: 20pt;
+}
+#spanGastos{
+    color: #9baaad;
+    font-size: 20pt;
 }

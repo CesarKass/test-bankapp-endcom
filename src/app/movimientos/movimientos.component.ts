@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-movimientos',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovimientosComponent implements OnInit {
 
-  constructor() { }
+  Movimientos:any = []; 
+  constructor(private data : DataService){
+    this.data.getMov().subscribe(response =>{   
+      this.Movimientos = response;
+    })
+  } 
 
   ngOnInit(): void {
   }
