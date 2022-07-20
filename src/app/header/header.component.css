@@ -1,0 +1,23 @@
+.content{
+    background-color: #01455c;
+}
+.card-body .row{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+p{
+    margin-top: 0px !important;
+    margin-bottom: 0px;
+    color: #0791bf;
+    font-size: 10pt;
+    font-weight: bold;
+    line-height: 18px;
+}
+
+span{
+    color: #05be92;
+}
+
+#spanIngresos > #spanGastos{
+    color: #9baaad;
+}
